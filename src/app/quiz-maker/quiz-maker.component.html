@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-11">
     <select #category id="categorySelect" (change)="getSubcategories(category.value)">
-      <option>Select category</option>
+      <option value=0 >Select category</option>
       <option [value]="category.id" *ngFor="let category of categories">
         {{category.name}}
       </option>

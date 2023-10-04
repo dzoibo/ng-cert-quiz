@@ -26,7 +26,8 @@ export class QuizMakerComponent {
 
 
   getSubcategories(id: string){
-      const index=this.categories.findIndex(category=>category.id.toString()===id);
-      this.subCategories=this.categories[index].subCategories;
+    this.subCategories=[];
+    const index=this.categories.findIndex(category=>category.id.toString()===id);
+    this.subCategories=this.categories[index].subCategories;
   }
 }
