@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import {Question} from '../data.models';
 
 @Component({
@@ -14,6 +14,10 @@ export class QuestionComponent {
   correctAnswer?: string;
   @Input()
   userAnswer?: string;
+  @Output()
+  changeQuestionEvent= new EventEmitter<null>;
+  @Input()
+  isQuestionChanged?:boolean;
 
   getButtonClass(answer: string): string {
     if (! this.userAnswer) {
@@ -36,5 +40,9 @@ export class QuestionComponent {
   buttonClicked(answer: string): void {
     this.currentSelection = answer;
     this.change.emit(answer);
+  }
+
+  changeQuestion(){
+    this.changeQuestionEvent.emit();
   }
 }

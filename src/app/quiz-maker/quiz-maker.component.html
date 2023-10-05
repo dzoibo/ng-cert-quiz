@@ -27,14 +27,7 @@
 
 </div>
 <div class="row">
-   <app-quiz [questions]="questions$ | async" ></app-quiz>
+   <app-quiz [questions]="questions$ | async" [difficulty]="difficulty.value" [categoryId]="categoryId.toString()"></app-quiz>
 </div>
 
-<!--
-  <select #category id="categorySelect" (change)="getSubcategories(category.value)">
-      <option value=0 >Select category</option>
-      <option [value]="category.id" *ngFor="let category of categories">
-        {{category.name}}
-      </option>
-    </select>
--->
+
