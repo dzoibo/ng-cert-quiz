@@ -1,0 +1,26 @@
+#filterResultList{
+    position: absolute;
+    left: 20px;
+    background: white;
+    border: 0.2px solid black;
+    width: 204px;
+    margin-top: -8px;
+    box-shadow: 1px 1px 15px -2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 15px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 15px -2px rgba(0,0,0,0.75);
+}
+#filterResultList .item:hover{
+    background-color: #1976d2;
+    cursor: pointer;
+    color:white;
+}
+#filterResultList .item{
+    text-transform: capitalize;
+    padding: 0px 0px 0px 15px;
+}
+#filterResultList div{
+    padding: 15px;
+}
+input{
+    outline: none;
+}
